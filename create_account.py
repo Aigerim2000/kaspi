@@ -20,12 +20,12 @@ def create_account(database: AccountDatabase, currency: str, balance: Decimal) -
 
 
 if __name__ == "__main__":
-    dbname:str = "kaspi"
+    dbname:str = "postgres"
     if dbname == "":
         database = AccountDatabaseRAM()
         print("Using RAM")
     else:
-        port:int = 5432
+        port:int = 5433
         # user:str = os.environ.get("pg_user")
         # password:str = os.environ.get("pg_password")
         user ="postgres"

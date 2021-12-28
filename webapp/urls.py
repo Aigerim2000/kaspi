@@ -20,7 +20,9 @@ from webapp import views
 urlpatterns = [
     path('', views.index),
     path('accounts/', views.accounts_list),
+    path('accounts/<str:id_>/', views.account_detail,name = 'account_detail'),
     path('api/accounts/', views.accounts),
     path('createacc/', views.create_account),
     path('postacc/', views.post_account, name = 'post_account'),
+    path('posttr/', views.post_trs, name = 'post_trs'),
 ]
